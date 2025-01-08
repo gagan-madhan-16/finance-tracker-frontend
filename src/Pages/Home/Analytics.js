@@ -7,6 +7,8 @@ import ArrowDropUpIcon from '@mui/icons-material/ArrowDropUp';
 import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
 // import MovingIcon from '@mui/icons-material/Moving';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import "./home.css";
+
 
 
 const Analytics = ({ transactions }) => {
@@ -69,7 +71,7 @@ const Analytics = ({ transactions }) => {
 
   return (
     <>
-      <Container className="mt-5 ">
+      <Container className="mt-5" style={{ backgroundColor: '#041C32', color: 'white' }}>
         <Row>
           <div className="col-lg-3 col-md-6 mb-4">
             <div className="card h-100">

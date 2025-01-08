@@ -1,5 +1,7 @@
 import React from "react";
 import CircularProgressBar from "../../components/CircularProgressBar";
+import "./home.css";
+
 
 const CardBox = (props) => {
   const cards = [

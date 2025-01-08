@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Button, Form, Modal } from "react-bootstrap";
+import "./home.css";
+
 
 const ModelForm = ({transaction, onClose, isShow}) => {
 
@@ -31,11 +33,11 @@ const ModelForm = ({transaction, onClose, isShow}) => {
 
   return (
     <div>
-      <Modal show={isShow} onHide={handleClose} centered>
-        <Modal.Header closeButton>
-          <Modal.Title>Update Transaction Details</Modal.Title>
+        <Modal show={isShow} onHide={onClose} centered style={{ backgroundColor: '#fff' }}>
+        <Modal.Header closeButton style={{ backgroundColor: '#041C32', color: 'white' }}>
+          <Modal.Title style={{ color: 'white' }}>Update Transaction Details</Modal.Title>
         </Modal.Header>
-        <Modal.Body>
+        <Modal.Body style={{ backgroundColor: '#041C32', color: 'white' }}>
           <Form>
             <Form.Group className="mb-3" controlId="formName">
               <Form.Label>Title</Form.Label>
@@ -118,11 +120,9 @@ const ModelForm = ({transaction, onClose, isShow}) => {
           </Form>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-          <Button variant="primary">Submit</Button>
-        </Modal.Footer>
+            <Button variant="secondary" onClick={onClose}>Close</Button>
+             <Button variant="primary" type="submit">Submit</Button>
+          </Modal.Footer>
       </Modal>
     </div>
   );

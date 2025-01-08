@@ -186,11 +186,8 @@ const Home = () => {
         </>
       ) : (
         <>
-          <Container
-            style={{ position: "relative", zIndex: "2 !important" }}
-            className="mt-3"
-          >
-            <div className="filterRow">
+          <Container className="mt-3" style={{ backgroundColor: '#041C32', color: 'white' }}>  
+          <div className="ems-filterRow">
               <div className="text-white">
                 <Form.Group className="mb-3" controlId="formSelectFrequency">
                   <Form.Label>Select Frequency</Form.Label>
@@ -240,13 +237,10 @@ const Home = () => {
               </div>
 
               <div>
-                <Button onClick={handleShow} className="addNew">
+              <Button variant="primary" className="ems-custom-btn" onClick={handleShow}>
                   Add New
-                </Button>
-                <Button onClick={handleShow} className="mobileBtn">
-                  +
-                </Button>
-                <Modal show={show} onHide={handleClose} centered>
+              </Button>
+              <Modal show={show} onHide={handleClose} centered dialogClassName="bg-[#a8c8e6]">
                   <Modal.Header closeButton>
                     <Modal.Title>Add Transaction Details</Modal.Title>
                   </Modal.Header>

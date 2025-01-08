@@ -22,7 +22,7 @@ const ActionBox = (props) => {
 
   return (
     <>
-      <div className="icons-handle">
+      <div className="icons-handle" style={{ color: 'white' }}>
         <EditNoteIcon sx={{ cursor: "pointer" }} onClick={handleEditClick} />
         <DeleteForeverIcon
           sx={{ color: "red", cursor: "pointer" }}

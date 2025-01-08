@@ -1,28 +1,47 @@
-.filterRow{
+/* Reset some default styles for consistency */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #041C32;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.filterRow {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 20px;
-
+    background-color: #041C32;
 }
 
 .data-table {
     border-collapse: collapse;
-  }
-  
-.data-table thead th {
-    background-color: #f5f5f5;
+    color: white;
 }
 
-.icons-handle{
+.data-table thead th {
+    background-color: #093254;
+    color: white;
+}
+
+.icons-handle {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     gap: 15px;
-    /* width: 100%; */
+    width: 100%;
 }
 
-.date{
+.icons-handle i {
+    color: white;
+}
+
+.date {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -30,47 +49,49 @@
     gap: 10px;
     margin-bottom: 10px;
 }
-  
-/* .data-table tbody tr:hover {
-    background-color: #f5f5f5;
-    cursor: pointer;
-}
-  
-.data-table tbody tr:nth-child(even) {
-    background-color: #f8f8f8;
-} */
 
-.containerBtn{
+.date input,
+.date label {
+    color: white;
+}
+
+.containerBtn {
     display: flex;
     align-items: center;
-    justify-content:center;
+    justify-content: center;
     margin-bottom: 20px;
     width: 100%;
     margin-left: 20px;
 }
-.mobileBtn{
+
+.containerBtn button {
+    background-color: #093254;
+    color: white;
+    border: 1px solid #FFFFFF;
+}
+
+.mobileBtn {
     display: none !important;
 }
 
-.iconBtnBox{
+.iconBtnBox {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
     padding: 10px;
-    border: 2px solid white;
+    border: 1px solid #333;
     border-radius: 8px;
-    
-
 }
 
-.iconActive{
-    background-color: white;
-    color: black;
+.iconActive {
+    background-color: #093254;
+    color: white;
 }
-.iconDeactive{
-    background-color: rgb(78, 74, 78);
-    color: black;
+
+.iconDeactive {
+    background-color: #284E71;
+    color: #888;
 }
 
 @media only screen and (max-width: 600px) {
@@ -78,38 +99,28 @@
         padding: 0px !important;
         margin-top: 0px !important;
         display: flex;
-        gap: "5px";
-        
+        gap: 5px;
     }
-    .addNew{
-        /* padding-top: 20px; */
+    .addNew {
         display: none !important;
     }
-    .mobileBtn{
+    .mobileBtn {
         display: inline-block !important;
+        background-color: #093254;
+        color: white;
+        border: 1px solid #FFFFFF;
     }
-    .iconBtnBox{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border: 0px;
-        
+    .iconBtnBox {
+        border: none;
     }
-    
-    .date{
-        /* padding: 10px; */
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: "10px";
+    .date {
         flex-direction: column;
         margin-bottom: 10px;
     }
-    .date .form-group{
+    .date .form-group {
         width: 45%;
     }
-
-    .containerBtn{
+    .containerBtn {
         margin-left: 0px !important;
     }
 }
